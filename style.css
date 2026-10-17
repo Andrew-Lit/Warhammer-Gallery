@@ -1,0 +1,87 @@
+:root {
+    --bg: #2b2d31;
+    --text: #e8e6e3;
+    --gold: #c9a24b;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+}
+
+h1, h2 {
+    color: var(--gold);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img{
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    font-size: 32px;
+    color: var(--text);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 48px;
+    color: var(--gold);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 16px;
+}
+
+.modal-caption{
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--text);
+}
+
+.modal-description {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--text);
+}
