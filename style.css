@@ -4,6 +4,10 @@
     --gold: #c9a24b;
 }
 
+body.red {
+    --gold: #c0392b;
+}
+
 body {
     background-color: var(--bg);
     color: var(--text);
@@ -85,3 +89,4 @@ img {
     text-align: center;
     color: var(--text);
 }
+

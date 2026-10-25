@@ -7,6 +7,7 @@ const miniatures = [
 const modal = document.querySelector(`#modal`);
 const modalImg = document.querySelector(`#modal-img`);
 const closeBtn = document.querySelector(`#close`);
+const themeBtn = document.querySelector(`#theme`); // смена темы
 const caption = document.querySelector(`#caption`);
 const modalDescription = document.querySelector(`#description`);
 const prevBtn = document.querySelector(`#prev`); 
@@ -123,3 +124,6 @@ document.addEventListener(`keydown`, function (event) {
     
 });
 
+themeBtn.addEventListener(`click`, function() {
+    document.querySelector(`body`).classList.toggle(`red`);
+});
