@@ -1,11 +1,12 @@
 :root {
     --bg: #2b2d31;
     --text: #e8e6e3;
-    --gold: #c9a24b;
+    --accent: #c9a24b;
 }
 
 body.red {
-    --gold: #c0392b;
+    --accent: #c0392b;
+    --bg: #2b2224;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 }
 
 h1, h2 {
-    color: var(--gold);
+    color: var(--accent);
 }
 
 main {
@@ -25,7 +26,7 @@ main {
 }
 
 .card {
-    border: 1px solid var(--gold);
+    border: 1px solid var(--accent);
     border-radius: 8px;
     padding: 12px;
 }
@@ -65,7 +66,7 @@ img {
 
 .arrow {
     font-size: 48px;
-    color: var(--gold);
+    color: var(--accent);
     background: none;
     border: none;
     cursor: pointer;
@@ -90,3 +91,13 @@ img {
     color: var(--text);
 }
 
+@media (max-width: 600px) {
+    .arrow {
+        font-size: 32px;
+        padding: 0 8px;
+    }
+
+    .modal img {
+        max-width: 80%;
+    }
+}
