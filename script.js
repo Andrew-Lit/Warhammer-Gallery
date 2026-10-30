@@ -1,7 +1,7 @@
 const miniatures = [
     { title: `Custodes Soldaty`, folder: `images/soldaty`, count: 5, description: `Вексила` },
-    { title: `Custodes Warden`, folder: `images/warden`, count: 5, description: `описание` },
-    { title: `Custodes Shield-captain`, folder: `images/shield-captain`, count: 5, description: `описание` }
+    { title: `Custodes Warden`, folder: `images/warden`, count: 5, description: `Основной воин` },
+    { title: `Custodes Shield-captain`, folder: `images/shield-captain`, count: 5, description: `Капитан` }
 ]; 
 // создание карточек
 const modal = document.querySelector(`#modal`);
@@ -123,7 +123,16 @@ document.addEventListener(`keydown`, function (event) {
     }
     
 });
-
+//обработчик кнопки темы
 themeBtn.addEventListener(`click`, function() {
     document.querySelector(`body`).classList.toggle(`red`);
+    if (document.body.classList.contains(`red`)) {
+        localStorage.setItem(`theme`, `red`);
+    } else {
+        localStorage.setItem(`theme`, `gold`);
+    }
 });
+//запомненная тема
+if (localStorage.getItem(`theme`) === `red`) {
+    document.body.classList.add(`red`);
+}
